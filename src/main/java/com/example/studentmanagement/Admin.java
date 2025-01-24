@@ -10,4 +10,8 @@ public class Admin extends  Person implements Serializable {
         super(name,surname,birthday,  password, email);
     }
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

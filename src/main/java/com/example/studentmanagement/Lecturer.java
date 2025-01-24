@@ -24,4 +24,8 @@ public class Lecturer extends Person implements Serializable {
         return subjects;
     }
 
+    @Override
+    public String toString() {
+        return super.toString()+subjects.toString();
+    }
 }

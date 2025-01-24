@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.URL;
 import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 
@@ -103,15 +104,7 @@ public class AdminViewController implements Initializable {
         tableSurname.setCellValueFactory(new PropertyValueFactory<Person,String>("Surname"));
         tableEmail.setCellValueFactory(new PropertyValueFactory<Person,String>("Email"));
 
-        for (Lecturer st: lecturers){
-            System.out.println("lectur "+st);
-        }
-        for (Student st: students){
-            System.out.println("student "+st);
-        }
-        for (Admin st: admins){
-            System.out.println("admin "+st);
-        }
+
     }
     @FXML
     protected void addUser()  {
@@ -245,7 +238,6 @@ public class AdminViewController implements Initializable {
             admins.removeIf(s -> s.getId() == u);
         }
 
-        System.out.println(u);
        usertable.getItems().remove(id);
 
     }
@@ -285,6 +277,18 @@ public class AdminViewController implements Initializable {
         if(name.isBlank()){
             dsubFeedback.setText("Please choose subject");
         }else{
+            for (Student s:students){
+                for(Map.Entry<Subject, Float> entry : s.getGrades().entrySet()) {
+                    String key = entry.getKey().getName();
+                    if(key.equals(name)){
+                        s.getGrades().remove(entry.getKey());
+                    }
+
+                }
+            }
+            for (Lecturer s:lecturers){
+                s.getSubjects().removeIf(sub -> sub.getName().equals(name));
+            }
             subjects.removeIf(s -> s.getName().equals(name));
             subjectList.getItems().clear();
             deleteSubjectList.getItems().clear();
