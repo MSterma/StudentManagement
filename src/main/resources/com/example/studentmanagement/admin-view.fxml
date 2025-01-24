@@ -35,7 +35,7 @@
             <Label layoutX="60.0" layoutY="170.0" text="Birthday" />
             <ChoiceBox fx:id="newAccType" layoutX="121.0" layoutY="14.0" prefHeight="25.0" prefWidth="150.0" />
             <Label layoutX="48.0" layoutY="18.0" text="AccountType" />
-            <Label fx:id="feedback" layoutX="159.0" layoutY="204.0" prefHeight="17.0" prefWidth="34.0" />
+            <Label fx:id="feedback" layoutX="43.0" layoutY="204.0" prefHeight="17.0" prefWidth="243.0" />
             <Label layoutX="106.0" layoutY="263.0" prefHeight="11.0" prefWidth="90.0" text="Add new Subject" />
             <TextField fx:id="newSubject" layoutX="150.0" layoutY="292.0" />
             <Label layoutX="75.0" layoutY="295.0" text="Name" />
@@ -50,13 +50,13 @@
       <Button fx:id="deleteUser" layoutX="787.0" layoutY="377.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="25.0" prefWidth="114.0" text="Delete user" />
       <Label layoutX="85.0" layoutY="398.0" text="Value" />
       <TextField fx:id="newSubjectVal" layoutX="163.0" layoutY="394.0" />
-      <Label fx:id="newSubjectFeedback" layoutX="174.0" layoutY="431.0" />
+      <Label fx:id="newSubjectFeedback" layoutX="115.0" layoutY="431.0" prefHeight="17.0" prefWidth="149.0" />
       <ChoiceBox fx:id="deleteSubjectList" layoutX="436.0" layoutY="377.0" prefWidth="150.0" />
       <Label layoutX="436.0" layoutY="348.0" text="Delete subject" />
       <Button id="removeSubject" layoutX="623.0" layoutY="440.0" mnemonicParsing="false" onAction="#removeSubject" prefHeight="25.0" prefWidth="149.0" text="Remove" />
       <Button id="deleteSubject" layoutX="438.0" layoutY="427.0" mnemonicParsing="false" onAction="#deleteSubject" prefHeight="25.0" prefWidth="149.0" text="Delete" />
-      <Label fx:id="dsubFeedback" layoutX="497.0" layoutY="407.0" />
-      <Label fx:id="assFeedback" layoutX="630.0" layoutY="411.0" />
-      <Button onAction="#logOut" fx:id="logOut" layoutX="886.0" layoutY="2.0" mnemonicParsing="false" text="Log out" />
+      <Label fx:id="dsubFeedback" layoutX="448.0" layoutY="407.0" prefHeight="17.0" prefWidth="125.0" />
+      <Label fx:id="assFeedback" layoutX="630.0" layoutY="411.0" prefHeight="17.0" prefWidth="134.0" />
+      <Button fx:id="logOut" layoutX="886.0" layoutY="2.0" mnemonicParsing="false" onAction="#logOut" text="Log out" />
    </children>
 </AnchorPane>

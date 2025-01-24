@@ -20,6 +20,7 @@ public class LecturerViewController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    List<Lecturer> lecturers=LecturersList.getLecturers();
     List<Student> students=StudentsList.getStudents();
     static {
         try {
@@ -95,6 +96,8 @@ public class LecturerViewController implements Initializable {
     private TableColumn<TableRow,String> studentSurname;
     @FXML
     private TableColumn<TableRow,String> studentGrade;
+    @FXML
+    private Label passFeedback;
 
 
     @Override
@@ -162,12 +165,28 @@ public class LecturerViewController implements Initializable {
     @FXML
     protected  void changePassword(){
         if(!old.getText().equals(currentLoggedIn.getPassword())){
+
+            passFeedback.setText("Incorrect old password");
             return;
         }
         if(newPass.getText().isBlank()){
+            passFeedback.setText("Password can't be empty");
             return;
         }
-        currentLoggedIn.setPassword(newPass.getText());
+        if(old.getText().equals(newPass.getText())){
+            passFeedback.setText("Passwords can't be the same");
+            return;
+        }
+        passFeedback.setText("Passwords changed");
+
+        for (Lecturer l:lecturers){
+            if(Objects.equals(l.getPassword(), currentLoggedIn.getPassword()) && Objects.equals(l.getEmail(), currentLoggedIn.getEmail())){
+                l.setPassword(newPass.getText());
+                currentLoggedIn.setPassword(newPass.getText());
+                break;
+            }
+        }
+
     }
 
     @FXML
