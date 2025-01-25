@@ -308,6 +308,14 @@ public class AdminViewController implements Initializable {
     protected void assignSubject(){
         int id=usertable.getSelectionModel().getSelectedIndex();
         var u=tableId.getCellData(id);
+        if(subjectList.getValue()==null){
+            assFeedback.setText("no subject selected");
+            return;
+        }
+        if(tableAccType.getValue().equals("Admin")){
+            assFeedback.setText("Wrong user type");
+            return;
+        }
         if(tableAccType.getValue()==null){
             return;
         }
@@ -346,9 +354,6 @@ public class AdminViewController implements Initializable {
             }
 
         }
-        if(tableAccType.getValue().equals("Admin")){
-            assFeedback.setText("Can't assign subject to admin ");
-        }
         assFeedback.setText("Subject added");
 
     }
@@ -357,6 +362,14 @@ public class AdminViewController implements Initializable {
         int id=usertable.getSelectionModel().getSelectedIndex();
         var u=tableId.getCellData(id);
         if(tableAccType.getValue()==null){
+            return;
+        }
+        if(subjectList.getValue()==null){
+            assFeedback.setText("no subject selected");
+            return;
+        }
+        if(tableAccType.getValue().equals("Admin")){
+            assFeedback.setText("wrong user type");
             return;
         }
         if(tableAccType.getValue().equals("Student")){
@@ -386,10 +399,7 @@ public class AdminViewController implements Initializable {
             }
 
         }
-        if(tableAccType.getValue().equals("Admin")){
-            assFeedback.setText("Can't remove subject from admin ");
-        }
-        assFeedback.setText("Subject removed from user ");
+        assFeedback.setText("Subject removed ");
 
 
 
