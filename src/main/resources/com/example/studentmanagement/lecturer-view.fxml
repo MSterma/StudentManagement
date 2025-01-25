@@ -7,13 +7,17 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="817.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.studentmanagement.LecturerViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentmanagement.LecturerViewController">
    <children>
-      <ChoiceBox fx:id="subjectList" layoutX="300.0" layoutY="26.0" onAction="#showTable" prefWidth="150.0" />
-      <Label layoutX="14.0" layoutY="6.0" text="Lecturer's credentials" />
-      <Label layoutX="300.0" layoutY="6.0" text="Choose subject" />
-      <TableView fx:id="studentTable" layoutX="300.0" layoutY="59.0" prefHeight="200.0" prefWidth="513.0">
+      <ChoiceBox fx:id="subjectList" layoutX="404.0" layoutY="31.0" onAction="#showTable" prefWidth="150.0" />
+      <Label layoutX="55.0" layoutY="34.0" text="Lecturer's credentials" textFill="#3d6794">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="307.0" layoutY="35.0" text="Choose subject:" />
+      <TableView fx:id="studentTable" layoutX="295.0" layoutY="72.0" prefHeight="200.0" prefWidth="486.0">
         <columns>
           <TableColumn fx:id="studentId" prefWidth="75.0" text="ID" />
           <TableColumn fx:id="studentName" prefWidth="75.0" text="Name" />
@@ -21,25 +25,27 @@
            <TableColumn fx:id="studentGrade" prefWidth="75.0" text="Grade" />
         </columns>
       </TableView>
-      <Label layoutX="301.0" layoutY="267.0" text="Set grade" />
-      <Button id="submitGrade" layoutX="301.0" layoutY="327.0" mnemonicParsing="false" onAction="#setGrade" text="Submit" />
-      <ChoiceBox fx:id="gradesScale" layoutX="300.0" layoutY="284.0" prefWidth="150.0" />
-      <Label layoutX="24.0" layoutY="59.0" text="Surname" />
-      <Label layoutX="24.0" layoutY="83.0" text="Email" />
-      <Label layoutX="24.0" layoutY="106.0" text="Id" />
-      <Label layoutX="24.0" layoutY="30.0" text="Name" />
-      <Label fx:id="lName" layoutX="105.0" layoutY="30.0" />
-      <Label fx:id="lSurname" layoutX="105.0" layoutY="59.0" />
-      <Label fx:id="lEmail" layoutX="105.0" layoutY="83.0" />
-      <Label fx:id="lld" layoutX="105.0" layoutY="106.0" />
-      <Label layoutX="58.0" layoutY="151.0" text="Change password" />
-      <Label layoutX="34.0" layoutY="175.0" text="Old password:" />
-      <Label layoutX="33.0" layoutY="208.0" text="New password" />
-      <PasswordField fx:id="old" layoutX="119.0" layoutY="171.0" />
-      <PasswordField fx:id="newPass" layoutX="119.0" layoutY="204.0" />
-      <Button layoutX="110.0" layoutY="255.0" mnemonicParsing="false" onAction="#changePassword" text="Change password" />
-      <Button id="logOut" layoutX="751.0" layoutY="18.0" mnemonicParsing="false" onAction="#logOut" text="Log out" />
-      <Label text="Label" />
-      <Label fx:id="passFeedback" layoutX="63.0" layoutY="229.0" prefHeight="17.0" prefWidth="187.0" />
+      <Label layoutX="307.0" layoutY="300.0" text="Set grade:" />
+      <Button id="submitGrade" layoutX="534.0" layoutY="296.0" mnemonicParsing="false" onAction="#setGrade" text="Submit" />
+      <ChoiceBox fx:id="gradesScale" layoutX="371.0" layoutY="296.0" prefWidth="150.0" />
+      <Label layoutX="55.0" layoutY="86.0" text="Surname:" />
+      <Label layoutX="55.0" layoutY="110.0" text="Email:" />
+      <Label layoutX="55.0" layoutY="133.0" text="Id:" />
+      <Label layoutX="55.0" layoutY="57.0" text="Name:" />
+      <Label fx:id="lName" layoutX="105.0" layoutY="30.0" translateX="20.0" translateY="27.0" />
+      <Label fx:id="lSurname" layoutX="105.0" layoutY="59.0" translateX="20.0" translateY="27.0" />
+      <Label fx:id="lEmail" layoutX="105.0" layoutY="83.0" translateX="20.0" translateY="27.0" />
+      <Label fx:id="lld" layoutX="105.0" layoutY="106.0" translateX="20.0" translateY="27.0" />
+      <Label layoutX="102.0" layoutY="172.0" text="Change password" textFill="#3d6794">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="35.0" layoutY="211.0" text="Old password:" />
+      <Label layoutX="34.0" layoutY="244.0" text="New password:" />
+      <PasswordField fx:id="old" layoutX="120.0" layoutY="207.0" />
+      <PasswordField fx:id="newPass" layoutX="120.0" layoutY="240.0" />
+      <Button layoutX="101.0" layoutY="278.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="26.0" prefWidth="112.0" text="Change password" />
+      <Button id="logOut" layoutX="716.0" layoutY="31.0" mnemonicParsing="false" onAction="#logOut" text="Log out" />
+      <Label fx:id="passFeedback" alignment="CENTER" layoutX="60.0" layoutY="312.0" prefHeight="26.0" prefWidth="193.0" textAlignment="CENTER" />
    </children>
 </AnchorPane>

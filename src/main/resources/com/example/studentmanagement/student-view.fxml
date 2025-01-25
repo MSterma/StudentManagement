@@ -6,10 +6,11 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="798.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentmanagement.StudentViewConroller">
    <children>
-      <TableView fx:id="gradesTable" layoutX="391.0" layoutY="66.0" prefHeight="397.0" prefWidth="393.0">
+      <TableView fx:id="gradesTable" layoutX="281.0" layoutY="120.0" prefHeight="238.0" prefWidth="457.0">
         <columns>
           <TableColumn fx:id="subjectName" prefWidth="253.0" text="Subject" />
           <TableColumn fx:id="grade" minWidth="0.0" prefWidth="78.0" text="Grade" />
@@ -17,26 +18,34 @@
 
         </columns>
       </TableView>
-      <Label layoutX="31.0" layoutY="32.0" prefHeight="17.0" prefWidth="124.0" text="Student's information" />
-      <Label layoutX="568.0" layoutY="49.0" prefHeight="17.0" prefWidth="39.0" text="Grades" />
-      <Label layoutX="29.0" layoutY="117.0" prefHeight="17.0" prefWidth="55.0" text="Average:" />
-      <Label layoutX="413.0" layoutY="429.0" />
-      <Label layoutX="31.0" layoutY="49.0" text="Name" />
-      <Label layoutX="33.0" layoutY="66.0" text="Surname" />
-      <Label fx:id="stName" layoutX="93.0" layoutY="49.0" />
-      <Label fx:id="stSurname" layoutX="93.0" layoutY="66.0" />
-      <Label layoutX="33.0" layoutY="83.0" text="Email" />
-      <Label fx:id="stEmail" layoutX="93.0" layoutY="83.0" />
-      <Label layoutX="33.0" layoutY="100.0" text="Id" />
-      <Label fx:id="stId" layoutX="93.0" layoutY="100.0" />
-      <Label fx:id="stAvg" layoutX="93.0" layoutY="117.0" />
-      <Label layoutX="93.0" layoutY="134.0" text="Change password " />
-      <Label layoutX="15.0" layoutY="160.0" text="Old password:" />
-      <Label layoutX="13.0" layoutY="181.0" text="New password:" />
-      <PasswordField fx:id="old" layoutX="93.0" layoutY="156.0" />
-      <PasswordField fx:id="newPass" layoutX="93.0" layoutY="186.0" />
-      <Button id="changePassword" layoutX="127.0" layoutY="239.0" mnemonicParsing="false" onAction="#changePassword" text="Change" />
-      <Button id="logOut" layoutX="739.0" layoutY="2.0" mnemonicParsing="false" onAction="#logOut" text="Log out" />
-      <Label fx:id="passFeedback" layoutX="43.0" layoutY="211.0" prefHeight="17.0" prefWidth="240.0" />
+      <Label layoutX="53.0" layoutY="37.0" prefHeight="18.0" prefWidth="150.0" text="Student's information" textAlignment="CENTER" textFill="#3d6794">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="490.0" layoutY="89.0" prefHeight="20.0" prefWidth="58.0" text="Grades" textFill="#3d6794">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="54.0" layoutY="131.0" prefHeight="17.0" prefWidth="55.0" text="Average:" />
+      <Label layoutX="54.0" layoutY="63.0" text="Name:" />
+      <Label layoutX="54.0" layoutY="80.0" text="Surname:" />
+      <Label fx:id="stName" layoutX="114.0" layoutY="63.0" prefHeight="18.0" prefWidth="29.0" />
+      <Label fx:id="stSurname" layoutX="114.0" layoutY="80.0" prefHeight="18.0" prefWidth="29.0" />
+      <Label layoutX="54.0" layoutY="97.0" text="Email:" />
+      <Label fx:id="stEmail" layoutX="114.0" layoutY="97.0" prefHeight="18.0" prefWidth="29.0" />
+      <Label layoutX="54.0" layoutY="114.0" text="Id:" />
+      <Label fx:id="stId" layoutX="114.0" layoutY="114.0" prefHeight="18.0" prefWidth="29.0" />
+      <Label fx:id="stAvg" layoutX="114.0" layoutY="131.0" prefHeight="18.0" prefWidth="29.0" />
+      <Label layoutX="87.0" layoutY="168.0" text="Change password " textFill="#3d6794">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="107.0" layoutY="202.0" text="Old password:" />
+      <Label layoutX="105.0" layoutY="259.0" text="New password:" />
+      <PasswordField fx:id="old" layoutX="57.0" layoutY="220.0" prefHeight="26.0" prefWidth="174.0" />
+      <PasswordField fx:id="newPass" layoutX="57.0" layoutY="277.0" prefHeight="26.0" prefWidth="174.0" />
+      <Button id="changePassword" layoutX="116.0" layoutY="313.0" mnemonicParsing="false" onAction="#changePassword" text="Change" />
+      <Button id="logOut" layoutX="681.0" layoutY="37.0" mnemonicParsing="false" onAction="#logOut" text="Log out" />
+      <Label fx:id="passFeedback" layoutX="69.0" layoutY="339.0" prefHeight="18.0" prefWidth="150.0" />
    </children>
 </AnchorPane>

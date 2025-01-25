@@ -161,8 +161,8 @@ public class StudentViewConroller implements Initializable {
         Parent root =  FXMLLoader.load(StudentManagement.class.getResource("login-view.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        stage.setWidth(300);
-        stage.setHeight(500);
+//        stage.setWidth(300);
+//        stage.setHeight(500);
         stage.setResizable(false);
         stage.setScene(scene);
 

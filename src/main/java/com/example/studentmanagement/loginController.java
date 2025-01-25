@@ -73,8 +73,8 @@ public class loginController implements Initializable {
                     Parent root =  FXMLLoader.load(StudentManagement.class.getResource("admin-view.fxml"));
                     stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
                     scene = new Scene(root);
-                    stage.setWidth(1000);
-                    stage.setHeight(600);
+//                    stage.setWidth(1000);
+//                    stage.setHeight(600);
                     stage.setResizable(true);
 
                     stage.setScene(scene);
@@ -94,8 +94,8 @@ public class loginController implements Initializable {
                     root=loader.load();
                     stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
                     scene = new Scene(root);
-                    stage.setWidth(1000);
-                    stage.setHeight(600);
+//                    stage.setWidth(1000);
+//                    stage.setHeight(600);
                     stage.setResizable(true);
 
                     stage.setScene(scene);
@@ -116,8 +116,8 @@ public class loginController implements Initializable {
                     root=loader.load();
                     stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
                     scene = new Scene(root);
-                    stage.setWidth(1000);
-                    stage.setHeight(600);
+//                    stage.setWidth(1000);
+//                    stage.setHeight(600);
                     stage.setResizable(true);
 
                     stage.setScene(scene);

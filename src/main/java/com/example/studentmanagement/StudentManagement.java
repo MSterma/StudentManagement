@@ -25,8 +25,8 @@ public class StudentManagement extends Application {
         Scene scene = new Scene(root);
         stage.setTitle("StudentMangement");
         stage.setScene(scene);
-        stage.setWidth(300);
-        stage.setHeight(500);
+//        stage.setWidth(300);
+//        stage.setHeight(500);
         stage.setResizable(false);
         stage.show();
     }

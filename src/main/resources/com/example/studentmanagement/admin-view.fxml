@@ -9,10 +9,11 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="582.0" prefWidth="948.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentmanagement.AdminViewController">
    <children>
-      <TableView fx:id="usertable" layoutX="386.0" layoutY="67.0" prefHeight="270.0" prefWidth="500.0">
+      <TableView fx:id="usertable" layoutX="386.0" layoutY="88.0" prefHeight="270.0" prefWidth="500.0">
         <columns>
            <TableColumn fx:id="tableId" prefWidth="75.0" text="Id" />
           <TableColumn fx:id="tableName" prefWidth="125.0" text="Name" />
@@ -20,43 +21,58 @@
            <TableColumn fx:id="tableEmail" prefWidth="175.0" text="Email" />
         </columns>
       </TableView>
-      <ChoiceBox fx:id="tableAccType" layoutX="735.0" layoutY="35.0" prefWidth="150.0" />
-      <AnchorPane layoutX="12.0" layoutY="60.0" prefHeight="309.0" prefWidth="352.0">
+      <ChoiceBox fx:id="tableAccType" layoutX="512.0" layoutY="44.0" prefHeight="25.0" prefWidth="174.0" />
+      <AnchorPane layoutX="12.0" layoutY="60.0" prefHeight="229.0" prefWidth="352.0">
          <children>
-            <Label layoutX="66.0" layoutY="48.0" text="Name" />
-            <Label layoutX="66.0" layoutY="77.0" text="Surname" />
-            <TextField fx:id="email" layoutX="121.0" layoutY="102.0" />
-            <TextField fx:id="surname" layoutX="121.0" layoutY="73.0" />
-            <TextField fx:id="name" layoutX="121.0" layoutY="44.0" />
-            <PasswordField fx:id="password" layoutX="121.0" layoutY="134.0" />
+            <Label layoutX="39.0" layoutY="48.0" text="Name:" />
+            <Label layoutX="39.0" layoutY="77.0" text="Surname:" />
+            <TextField fx:id="email" layoutX="121.0" layoutY="102.0" prefHeight="25.0" prefWidth="174.0" />
+            <TextField fx:id="surname" layoutX="121.0" layoutY="73.0" prefHeight="25.0" prefWidth="174.0" />
+            <TextField fx:id="name" layoutX="121.0" layoutY="44.0" prefHeight="25.0" prefWidth="174.0" />
+            <PasswordField fx:id="password" layoutX="121.0" layoutY="134.0" prefHeight="25.0" prefWidth="174.0" />
             <DatePicker fx:id="bday" layoutX="121.0" layoutY="166.0" />
-            <Label layoutX="65.0" layoutY="106.0" text="E-mail" />
-            <Label layoutX="64.0" layoutY="138.0" text="Password" />
-            <Label layoutX="60.0" layoutY="170.0" text="Birthday" />
-            <ChoiceBox fx:id="newAccType" layoutX="121.0" layoutY="14.0" prefHeight="25.0" prefWidth="150.0" />
-            <Label layoutX="48.0" layoutY="18.0" text="AccountType" />
-            <Label fx:id="feedback" layoutX="43.0" layoutY="204.0" prefHeight="17.0" prefWidth="243.0" />
-            <Label layoutX="106.0" layoutY="263.0" prefHeight="11.0" prefWidth="90.0" text="Add new Subject" />
-            <TextField fx:id="newSubject" layoutX="150.0" layoutY="292.0" />
-            <Label layoutX="75.0" layoutY="295.0" text="Name" />
-            <Button fx:id="addUser" layoutX="46.0" layoutY="232.0" mnemonicParsing="false" onAction="#addUser" prefHeight="25.0" prefWidth="243.0" text="Add new user " />
+            <Label layoutX="39.0" layoutY="106.0" text="E-mail:" />
+            <Label alignment="CENTER_RIGHT" layoutX="39.0" layoutY="138.0" text="Password:" />
+            <Label layoutX="39.0" layoutY="170.0" text="Birthday:" />
+            <ChoiceBox fx:id="newAccType" layoutX="121.0" layoutY="14.0" prefHeight="25.0" prefWidth="174.0" />
+            <Label layoutX="39.0" layoutY="18.0" text="AccountType:" />
+            <Label fx:id="feedback" layoutX="122.0" layoutY="227.0" prefHeight="17.0" prefWidth="174.0" />
+            <Button fx:id="addUser" layoutX="122.0" layoutY="198.0" mnemonicParsing="false" onAction="#addUser" prefHeight="25.0" prefWidth="174.0" text="Add new user " />
+            <Label layoutX="185.0" layoutY="-10.0" text="Add user " textFill="#3d6794">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
-      <Label layoutX="137.0" layoutY="39.0" text="Add user " />
-      <ChoiceBox id="assignSubject" fx:id="subjectList" layoutX="622.0" layoutY="377.0" prefWidth="150.0" />
-      <Label layoutX="630.0" layoutY="357.0" text="Assign or remove subject" />
-      <Button id="assignSubject" layoutX="623.0" layoutY="472.0" mnemonicParsing="false" onAction="#assignSubject" prefHeight="25.0" prefWidth="149.0" text="Assign" />
-      <Button id="addNewSubject" fx:id="addSubject" layoutX="113.0" layoutY="472.0" mnemonicParsing="false" onAction="#addSubject" prefHeight="25.0" prefWidth="150.0" text="Add new subject" />
-      <Button fx:id="deleteUser" layoutX="787.0" layoutY="377.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="25.0" prefWidth="114.0" text="Delete user" />
-      <Label layoutX="85.0" layoutY="398.0" text="Value" />
-      <TextField fx:id="newSubjectVal" layoutX="163.0" layoutY="394.0" />
-      <Label fx:id="newSubjectFeedback" layoutX="115.0" layoutY="431.0" prefHeight="17.0" prefWidth="149.0" />
-      <ChoiceBox fx:id="deleteSubjectList" layoutX="436.0" layoutY="377.0" prefWidth="150.0" />
-      <Label layoutX="436.0" layoutY="348.0" text="Delete subject" />
-      <Button id="removeSubject" layoutX="623.0" layoutY="440.0" mnemonicParsing="false" onAction="#removeSubject" prefHeight="25.0" prefWidth="149.0" text="Remove" />
-      <Button id="deleteSubject" layoutX="438.0" layoutY="427.0" mnemonicParsing="false" onAction="#deleteSubject" prefHeight="25.0" prefWidth="149.0" text="Delete" />
-      <Label fx:id="dsubFeedback" layoutX="448.0" layoutY="407.0" prefHeight="17.0" prefWidth="125.0" />
-      <Label fx:id="assFeedback" layoutX="630.0" layoutY="411.0" prefHeight="17.0" prefWidth="134.0" />
-      <Button fx:id="logOut" layoutX="886.0" layoutY="2.0" mnemonicParsing="false" onAction="#logOut" text="Log out" />
+      <ChoiceBox id="assignSubject" fx:id="subjectList" layoutX="488.0" layoutY="436.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label layoutX="497.0" layoutY="406.0" text="Assign or remove subject" textFill="#3d6794">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Button id="assignSubject" layoutX="488.0" layoutY="500.0" mnemonicParsing="false" onAction="#assignSubject" prefHeight="25.0" prefWidth="174.0" text="Assign" />
+      <Button id="addNewSubject" fx:id="addSubject" layoutX="135.0" layoutY="390.0" mnemonicParsing="false" onAction="#addSubject" prefHeight="25.0" prefWidth="174.0" text="Add new subject" />
+      <Button fx:id="deleteUser" layoutX="712.0" layoutY="361.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="25.0" prefWidth="174.0" text="Delete user" />
+      <Label layoutX="82.0" layoutY="364.0" text="Value:" />
+      <Label fx:id="newSubjectFeedback" layoutX="136.0" layoutY="416.0" prefHeight="17.0" prefWidth="174.0" />
+      <ChoiceBox fx:id="deleteSubjectList" layoutX="133.0" layoutY="475.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label layoutX="177.0" layoutY="451.0" text="Delete subject" textFill="#3d6794">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Button id="removeSubject" layoutX="488.0" layoutY="467.0" mnemonicParsing="false" onAction="#removeSubject" prefHeight="25.0" prefWidth="174.0" text="Remove" />
+      <Button id="deleteSubject" layoutX="134.0" layoutY="512.0" mnemonicParsing="false" onAction="#deleteSubject" prefHeight="25.0" prefWidth="174.0" text="Delete" />
+      <Label fx:id="dsubFeedback" layoutX="133.0" layoutY="544.0" prefHeight="17.0" prefWidth="174.0" />
+      <Label fx:id="assFeedback" layoutX="488.0" layoutY="529.0" prefHeight="17.0" prefWidth="174.0" />
+      <Button fx:id="logOut" layoutX="829.0" layoutY="44.0" mnemonicParsing="false" onAction="#logOut" text="Log out" />
+      <TextField fx:id="newSubjectVal" layoutX="140.0" layoutY="360.0" prefHeight="25.0" prefWidth="174.0" translateX="-5.0" />
+      <Label layoutX="398.0" layoutY="47.0" text="Chose account type:" />
+      <TextField fx:id="newSubject" layoutX="136.0" layoutY="329.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label layoutX="168.0" layoutY="309.0" prefHeight="20.0" prefWidth="107.0" text="Add new Subject" textFill="#3d6794">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="81.0" layoutY="333.0" text="Name:" />
+      <Label layoutX="398.0" layoutY="440.0" text="Chose subject:" />
    </children>
 </AnchorPane>

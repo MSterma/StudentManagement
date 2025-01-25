@@ -273,6 +273,7 @@ public class AdminViewController implements Initializable {
     @FXML
     protected void deleteSubject(){
         var name=deleteSubjectList.getValue();
+        if(name == null) return;
         if(name.isBlank()){
             dsubFeedback.setText("Please choose subject");
         }else{
@@ -281,6 +282,7 @@ public class AdminViewController implements Initializable {
                     String key = entry.getKey().getName();
                     if(key.equals(name)){
                         s.getGrades().remove(entry.getKey());
+                        break;
                     }
 
                 }
@@ -413,8 +415,8 @@ public class AdminViewController implements Initializable {
         Parent root =  FXMLLoader.load(StudentManagement.class.getResource("login-view.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        stage.setWidth(300);
-        stage.setHeight(500);
+//        stage.setWidth(300);
+//        stage.setHeight(500);
         stage.setResizable(false);
         stage.setScene(scene);
 
