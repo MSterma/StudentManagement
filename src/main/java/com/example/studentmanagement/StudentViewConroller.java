@@ -24,9 +24,9 @@ public class StudentViewConroller implements Initializable {
     private Parent root;
     private List<Student> students=StudentsList.getStudents();
     public class TableData{
-        public String name;
-        public Float value;
-        public String grade;
+        private String name;
+        private Float value;
+        private String grade;
         TableData(String name, Float value, Float grade){
          this.name=name;
          this.grade=grade>=2.0F?Float.toString(grade):"";
@@ -87,6 +87,7 @@ public class StudentViewConroller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        students=StudentsList.getStudents();
         stName.setText(currentLoggedIn.getName());
         stSurname.setText(currentLoggedIn.getSurname());
         stEmail.setText(currentLoggedIn.getEmail());

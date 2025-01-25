@@ -21,13 +21,12 @@ import java.util.ResourceBundle;
 
 
 public class AdminViewController implements Initializable {
-    private int AdminId;
     // Program data:
     private String[] accTypes={"Student","Lecturer","Admin"};
-    List<Student> students=StudentsList.getStudents();
-    List<Lecturer> lecturers=LecturersList.getLecturers();
-    List<Admin> admins=AdminList.getAdmins();
-    List<Subject> subjects=SubjectList.getSubjects();
+   private List<Student> students=StudentsList.getStudents();
+    private List<Lecturer> lecturers=LecturersList.getLecturers();
+    private List<Admin> admins=AdminList.getAdmins();
+    private List<Subject> subjects=SubjectList.getSubjects();
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -330,6 +329,8 @@ public class AdminViewController implements Initializable {
                         }
                     }
                     s.addSubject(sub);
+                    assFeedback.setText("Subject added");
+
                 }
             }
 
@@ -348,13 +349,14 @@ public class AdminViewController implements Initializable {
                     }
                     if(!s.getSubjects().contains(sub)){
                         s.addSubject(sub);
+                        assFeedback.setText("Subject added");
+
                     }
 
                 }
             }
 
         }
-        assFeedback.setText("Subject added");
 
     }
     @FXML

@@ -20,8 +20,8 @@ public class LecturerViewController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
-    List<Lecturer> lecturers=LecturersList.getLecturers();
-    List<Student> students=StudentsList.getStudents();
+    private List<Lecturer> lecturers=LecturersList.getLecturers();
+     private List<Student> students=StudentsList.getStudents();
     static {
         try {
             currentLoggedIn = initializeLoggedIn();
@@ -30,10 +30,10 @@ public class LecturerViewController implements Initializable {
         }
     }
     public class TableRow{
-        public int id;
-        public String name;
-        public String surname;
-        public String grade;
+        private int id;
+        private String name;
+        private String surname;
+        private String grade;
         TableRow(int id,String name, String surname, Float grade){
             this.id=id;
             this.name=name;
@@ -147,12 +147,16 @@ public class LecturerViewController implements Initializable {
         if(subjectList.getValue()==null) return;
         int id=studentTable.getSelectionModel().getSelectedIndex();
         var u=studentId.getCellData(id);
+        if(u==null){
+            return;
+        }
         for (Student s:students){
             if(s.getId()==u){
                 for(Map.Entry<Subject, Float> entry : s.getGrades().entrySet()) {
                     Subject key = entry.getKey();
                     if(key.getName().equals(subjectList.getValue())){
-                        s.getGrades().replace(key, Float.parseFloat( gradesScale.getValue()))
+                        s.getGrades().replace(key, Float.parseFloat( gradesScale.getValue()));
+                        System.out.println("dodano");
 ;                        break;
                     }
                 }

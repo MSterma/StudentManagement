@@ -41,7 +41,10 @@ public class Subject implements Serializable {
         }
         Subject s=(Subject) obj;
         return this.name.equals(s.name);
-
     }
 
+    @Override
+    public String toString() {
+        return name+" "+value;
+    }
 }

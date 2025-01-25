@@ -5,14 +5,14 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.Locale;
 
-public class Person implements Serializable {
+public abstract class Person implements Serializable {
     public static int nextId=160;
-    private int id;
-    private String name;
-    private String email;
-    private String surname;
-    private LocalDate birthday;
-    private String password;
+    protected int id;
+    protected String name;
+    protected String email;
+    protected String surname;
+    protected LocalDate birthday;
+    protected String password;
     public Person(String name, String surname, LocalDate birthday, String password, String email){
         this.id=nextId;
         nextId++;

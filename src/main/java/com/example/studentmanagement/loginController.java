@@ -25,6 +25,7 @@ public class loginController implements Initializable {
 
     private List<Student> students=StudentsList.getStudents();
     private List<Lecturer> lecturers=LecturersList.getLecturers();
+    private List<Admin>  admins=AdminList.getAdmins();
 
     private Stage stage;
     private Scene scene;
@@ -49,7 +50,7 @@ public class loginController implements Initializable {
 
     @FXML
     protected void login(ActionEvent event) throws IOException {
-        var admins=AdminList.getAdmins();
+
         String username=usernameTextField.getText();
         String password=passwordField.getText();
         String type = accType.getValue();
